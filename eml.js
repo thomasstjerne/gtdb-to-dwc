@@ -83,13 +83,15 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 </pubDate>
     <language>dan</language>
     <abstract>
-        <para>The Genome Taxonomy Database (GTDB) is an initiative to establish a standardised microbial taxonomy based on genome phylogeny, primarly funded by an Australian Research Council Laureate Fellowship. 
+        <para> The Genome Taxonomy Database (GTDB) is an initiative to establish a standardised microbial taxonomy based on genome phylogeny, primarily funded by the Australian Research Council via a Laureate Fellowship (FL150100038) and Discovery Project (DP220100900), with the welcome assistance of strategic funding from The University of Queensland.
 
-The genomes used to construct the phylogeny are obtained from RefSeq and Genbank, and GTDB releases are indexed to RefSeq releases, starting with release 76. Importantly and increasingly, this dataset includes draft genomes of uncultured microorganisms obtained from metagenomes and single cells, ensuring improved genomic representation of the microbial world. All genomes are independently quality controlled using CheckM before inclusion in GTDB, see statistics here. 
-
-The genome tree on which the taxonomy is based is inferred using FastTree from an aligned concatenated set of 120 single copy marker proteins for Bacteria, and 122 marker proteins for Archaea (download page here). Additional marker sets are also used to cross-validate tree topologies including concatenated ribosomal proteins and ribosomal RNA genes.
-
-NCBI taxonomy was initially used to decorate the genome tree via tax2tree. The 16S rRNA-based Greengenes taxonomy is used to supplement the taxonomy particularly in regions of the tree with no cultured representatives. LPSN is used as the primary taxonomic authority for establishing naming priorities. Taxonomic ranks are normalised using phylorank and the taxonomy manually curated to remove polyphyletic groups. Polyphyly and rank evenness can be visualised in phylorank plots.
+        The genomes used to construct the phylogeny are obtained from RefSeq and GenBank, and GTDB releases are indexed to RefSeq releases, starting with release 76. Importantly and increasingly, this dataset includes draft genomes of uncultured microorganisms obtained from metagenomes and single cells, ensuring improved genomic representation of the microbial world. All genomes are independently quality controlled using CheckM before inclusion in GTDB, see statistics here .
+        
+        The GTDB taxonomy is based on genome trees inferred using FastTree from an aligned concatenated set of 120 single copy marker proteins for Bacteria, and with IQ-TREE from a concatenated set of 53 (starting with R07-RS207) and 122 (prior to R07-RS207) marker proteins for Archaea (download page here ). Additional marker sets are also used to cross-validate tree topologies including concatenated ribosomal proteins and ribosomal RNA genes.
+        
+        NCBI taxonomy was initially used to decorate the genome tree via tax2tree and subsequently used as a reference source of new taxonomic opinions including new names. The 16S rRNA-based Greengenes and SILVA taxonomies were intially used to supplement the taxonomy particularly in regions of the tree with no cultured representatives, however genome assembly identifiers are now used to create placeholder names for uncultured taxa.
+        
+        LPSN is used as the primary nomenclatural reference for establishing naming priorities and nomenclature types. All taxonomic ranks except species are normalised using PhyloRank and the taxonomy manually curated to remove polyphyletic groups. Polyphyly and rank evenness can be visualised in PhyloRank plots . Species were originally delineated based on phylogeny and rank normalization but this was replaced with an ANI-based method (starting with R04-RS89) to enable scalable and automated assignment of genomes to species clusters. 
 
 The GTDB taxonomy can be queried and downloaded through a number of tools at https://gtdb.ecogenomic.org/</para>
     </abstract>
