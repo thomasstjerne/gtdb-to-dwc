@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "csv-parse": "^4.3.4",
+    "lodash": "^4.17.11",
+    "stream-transform": "^1.0.8"
+  },
+  "name": "gtdb-to-dwc",
+  "description": "Extract GTDB release to DwC archive",
+  "version": "1.0.0",
+  "main": "index.js"
+}

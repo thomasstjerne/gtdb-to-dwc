@@ -1,0 +1,7 @@
+{
+    "version": "207",
+    "synonymFiles": {
+        "Archaea": "synonyms.ar53_r207.tsv",
+        "Bacteria": "synonyms.bac120_r207.tsv"
+    }
+}
