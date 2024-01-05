@@ -5,8 +5,9 @@ const config = require('./config')
 
 const download = () => {
     const {version} = config;
-    let taxonfile = `sp_clusters_r${version}.tsv`
-    let taxonurl =  `"${baseUrl}release${version}/${version}.0/auxillary_files/${taxonfile}"` 
+    const majorVersion = version.split('.')[0]
+    let taxonfile = `sp_clusters_r${majorVersion}.tsv`
+    let taxonurl =  `"${baseUrl}release${majorVersion}/${version}/auxillary_files/${taxonfile}"` 
     
     console.log(`Fetching ${taxonurl}`)
       execSync(`curl -o ${workingDir}/${taxonfile} ${taxonurl}`, { stdio: 'ignore' },(err, stdout, stderr) => {
@@ -16,8 +17,8 @@ const download = () => {
           }
         });
 
-    let ar_synonymy_url = `"${baseUrl}release${version}/${version}.0/auxillary_files/${config.synonymFiles.Archaea}"`
-    let bac_synonymy_url = `"${baseUrl}release${version}/${version}.0/auxillary_files/${config.synonymFiles.Bacteria}"`
+    let ar_synonymy_url = `"${baseUrl}release${majorVersion}/${version}/auxillary_files/${config.synonymFiles.Archaea}"`
+    let bac_synonymy_url = `"${baseUrl}release${majorVersion}/${version}/auxillary_files/${config.synonymFiles.Bacteria}"`
     
     console.log(`Fetching ${ar_synonymy_url}`)
       execSync(`curl -o ${workingDir}/ar_synonyms.tsv ${ar_synonymy_url}`, { stdio: 'ignore' },(err, stdout, stderr) => {

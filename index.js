@@ -92,8 +92,9 @@ const run = async ()=> {
         }
       })
     try {
+        const majorVersion = version.split(".")[0]
         download(); // should be synchronous
-        await writeTaxon(version);
+        await writeTaxon(majorVersion);
         await writeSynonyms();
         execSync(`cat archive/taxon_data.txt archive/synonym_data.txt > archive/taxon.txt`, { stdio: 'ignore' },(err, stdout, stderr) => {
             if (err) {
